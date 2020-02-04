@@ -1,11 +1,11 @@
 import { tokenize } from '../src/tokenize';
 
 describe(tokenize, () => {
-  it.skip('should return an array', () => {
+  it('should return an array', () => {
     expect(Array.isArray(tokenize(''))).toBe(true);
   });
 
-  it.skip('should be able to tokenize a pair of parentheses', () => {
+  it('should be able to tokenize a pair of parentheses', () => {
     const input = '()';
     const result = [
       { type: 'Parenthesis', value: '(' },
@@ -15,7 +15,7 @@ describe(tokenize, () => {
     expect(tokenize(input)).toEqual(result);
   });
 
-  it.skip('should ignore whitespace completely', () => {
+  it('should ignore whitespace completely', () => {
     const input = '                  ';
     const result = [];
 
@@ -23,7 +23,7 @@ describe(tokenize, () => {
   });
 
   // Exercise 1 - Begin
-  it.skip('should correctly tokenize a single digit', () => {
+  it('should correctly tokenize a single digit', () => {
     const input = '2';
     const result = [{ type: 'Number', value: 2 }];
 
